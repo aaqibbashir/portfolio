@@ -1,0 +1,392 @@
+/* Global Styles */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section Separator (Thicker Line between sections) */
+section {
+    border-bottom: 2px solid #ddd; /* Adds a line between sections */
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+/* Header Section */
+header {
+    /*background:linear-gradient(to right, #EE4B2B, #2D68C4);*/ /* Gradient color theme */
+	background-color:#2D68C4;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-image {
+    flex: 0 0 50px; /* Fixed size for the profile image */
+    margin-right: 10px; /* Spacing between image and name */
+}
+
+.header-profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular profile picture */
+}
+
+.header-name {
+    margin-right: auto; /* Push the nav to the right */
+}
+
+.header-name h2 {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    color: #fff;
+}
+
+/* Navigation Styles */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em; /* Slightly increased default font size */
+    position: relative; /* For underline effect */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus,
+header nav ul li a:active {
+    color: #fca311;
+    transform: scale(1.1); /* Slightly increase font size on hover */
+    text-decoration: none;
+}
+
+header nav ul li a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fca311;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover:after,
+header nav ul li a:focus:after,
+header nav ul li a:active:after {
+    width: 100%; /* Full underline when hovered or selected */
+}
+
+/* Hero Section */
+#hero {
+    /*background: url('img/your-background-image.jpg') no-repeat center center;*/ /* Add your background image path here */
+    background:#FFD4CC;
+	background-size: cover; /* Ensure the image covers the entire section */
+    color: #333; /* Darker text for contrast */
+    padding: 50px 0; /* Reduced height */
+    text-align: center;
+    position: relative; /* Allow for absolute positioning of the overlay */
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(224, 247, 250, 0.7); /* Light overlay with transparency */
+    z-index: 1; /* Place overlay above background */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative; /* Position relative to allow children to stack on top */
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-text h2 {
+    margin-bottom: 20px; /* Spacing between the title and buttons */
+}
+
+/* Button styles for the Hero section */
+#hero .btn {
+    background-color: #2D68C4; /* Primary color */
+    color: #fff; /* Text color */
+    padding: 10px 25px; /* Adjusted padding for a more compact button */
+    border-radius: 20px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+    display: inline-block; /* Ensures the button fits snugly */
+    margin-top: 10px; /* Added margin to create space between buttons */
+}
+#hero .btn:hover {
+    background-color: #EE4B2B;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px; /* Increased space after section titles */
+    color: #2D68C4;
+}
+
+/* Project Section */
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 80px; /* Increased margin for more space between sections */
+    padding: 0 50px;
+}
+
+.project {
+    flex: 0 0 30%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    color: #2D68C4;
+}
+
+.project p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Styled link for Project Section */
+.project .btn {
+    background-color: transparent; /* No background color */
+    color: #2D68C4; /* Primary color for the link */
+    padding: 5px 10px; /* Padding for some space around the text */
+    /*border: 1px solid #EE4B2B; /* Border to enhance visibility */
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    display: inline-block; /* Ensures the link fits snugly */
+}
+
+.project .btn:hover {
+    background-color: #EE4B2B; /* Background color on hover */
+    color: #fff; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge link on hover */
+}
+
+
+
+/* Skills Section */
+.skill-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    margin-bottom: 80px; /* Added more space between sections */
+}
+
+.skill {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px;
+    flex: 0 0 30%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    font-size: 1.4em;
+    color: #2D68C4;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: #333;
+    font-size: 1em;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 80px; /* More space before the next section */
+}
+
+.service {
+    flex: 0 0 28%;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    font-size: 1.3em;
+    color: #2D68C4;
+}
+
+.service p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Certifications Section */
+.certification-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 80px; /* More space before the next section */
+}
+
+.certification {
+    flex: 0 0 30%; /* Adjust for three certificates in a row */
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certification h3 {
+    font-size: 1.3em;
+    color: #2D68C4;
+}
+
+.certification p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.certification-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Contact Form */
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #2D68C4;
+    color: #fff;
+    padding: 10px 20px; /* Made button smaller */
+    text-transform: none; /* Removed uppercase */
+    border-radius: 20px; /* Rounded button */
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 50px; /* Added more space between button and footer */
+}
+
+form button:hover {
+    background-color: #fca311;
+}
+
+/* Footer */
+footer {
+    background-color: #2D68C4;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-links {
+    margin-top: 30px; /* Increased space above social links */
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    background-color: #fff;
+    color: #2D68C4;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #EE4B2B;
+    color: #fff;
+}
