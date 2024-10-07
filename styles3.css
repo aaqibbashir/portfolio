@@ -1,0 +1,415 @@
+/* Global Styles */
+body {
+    font-family: 'Andale Mono', monospace; /* Updated font to Andale Mono */
+    margin: 0;
+    padding: 0;
+    background-color: #F9F7F2; /* Light background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section Separator (Thicker Line between sections) */
+section {
+    border-bottom: 2px solid #ddd; /* Lighter line between sections */
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px; /* Added padding from left for titles */
+}
+section p, section h3{
+padding-left: 10px;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #69C3BA, #71A3B6); /* Subtle gradient background */
+    color: #fff; /* White text for contrast */
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #E45C45; /* Gradient complement color */
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-image {
+    flex: 0 0 50px; /* Fixed size for the profile image */
+    margin-right: 10px; /* Spacing between image and name */
+	margin-left:10px;
+}
+
+.header-profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular profile picture */
+}
+
+.header-name {
+    margin-right: auto; /* Push the nav to the right */
+}
+
+.header-name h2 {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    color: #fff; /* White color for better contrast */
+}
+
+/* Navigation Styles */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+header nav ul li a {
+    color: #fff; /* Links in white */
+    text-decoration: none;
+    font-size: 1.0em; /* Slightly increased default font size */
+    position: relative; /* For underline effect */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus,
+header nav ul li a:active {
+    color: #000; /* Change text to black on hover */
+    text-decoration: none;
+    transform: scale(1.1); /* Slightly increase font size on hover */
+}
+
+header nav ul li a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* White underline */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover:after,
+header nav ul li a:focus:after,
+header nav ul li a:active:after {
+    width: 100%; /* Full white underline when hovered or selected */
+}
+
+/* Hero Section */
+#hero {
+    background: #E5E4E2; /* Lighter gradient background */
+    color: #333; /* Darker text */
+    padding: 150px 0; /* Increased height */
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h2 {
+	color:#E45C45;
+    margin-bottom: 50px; /* Spacing between the title and buttons */
+    margin-top: -30px; /* Moved title a bit higher */
+}
+
+/* Button styles for Hero section */
+#hero .btn {
+    background-color: #69C3BA; /* Teal button color */
+    color: #fff; /* Text color */
+    padding: 5px 25px; /* Button padding */
+    border-radius: 20px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Button display */
+    margin-top: 80px; /* Spacing above buttons */
+}
+
+#hero .btn:hover {
+    background-color: #000; /* Black on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px; /* Increased space after section titles */
+    color: #E45C45; /* Section titles in teal */
+    padding-left: 20px; /* Added left padding for titles */
+}
+
+/* Project Section */
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next row */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 0 20px;
+    margin-bottom: 80px; /* Space below the section */
+}
+
+.project {
+    flex: 0 0 28%; /* Each project takes ~30% width to fit 3 per row with margins */
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px; /* Margin around each project */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.project:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for image */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.project h3 {
+    font-size: 1.2em; /* Title size */
+    color: #E45C45; /* Title color in blue */
+}
+
+.tool-used {
+    font-size: 0.9em; /* Smaller font for tool description */
+    color: #666; /* Gray color */
+    margin-bottom: 10px; /* Space below description */
+}
+
+/* Button styling for project actions */
+.project-btn {
+    background-color: #69C3BA; /* Button color */
+    color: #fff; /* Button text color */
+    padding: 3px 7px; /* Button padding */
+    border-radius: 20px; /* Rounded button corners */
+    text-decoration: none; /* No underline */
+    font-weight: normal; /* Bold text */
+	font-size:11px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover */
+    display: inline-block; /* Button display */
+    margin-top: 10px; /* Space above buttons */
+}
+
+.project-btn:hover {
+    background-color: #333; /* Darker on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+
+
+/* General Icon Styling for Skills and Services */
+.icon {
+    width: 60px;
+    height: 60px;
+    background-color: #69C3BA; /* Background color matching theme */
+    border-radius: 50%; /* Rounded shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto; /* Centered icon with space below */
+}
+
+.icon i {
+    font-size: 1.8em;
+    color: #fff; /* White icon color */
+}
+
+/* Skill Container */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 80px;
+}
+
+.skill {
+    flex: 0 0 28%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 80px;
+}
+
+.service {
+    flex: 0 0 28%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill, .service {
+        flex: 0 0 45%; /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill, .service {
+        flex: 0 0 100%; /* One item per row on mobile */
+    }
+}
+
+
+
+
+
+/* Certifications Section */
+.certification-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next row */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 0 20px;
+    margin-bottom: 80px; /* Space below the section */
+}
+
+.certification {
+    flex: 0 0 27%; /* Each certification takes ~30% width to fit 3 per row with margins */
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px; /* Margin around each certification */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.certification-img {
+    width: 100%; /* Set image width to container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+}
+
+
+.certification:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.cert-btn {
+    color: #0000ee; /* Text color */
+    padding: 3px 10px; /* Button padding */
+    border-radius: 20px; /* Rounded button corners */
+    text-decoration: none; /* No underline */
+    font-weight: normal; /* Regular text */
+	font-size:12px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover */
+    display: inline-block; /* Button display */
+    margin-top: 10px; /* Space above buttons */
+    /*border: 0.5px solid #E45C45; /* Border color to match text */
+}
+
+.cert-btn:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #000; /* Add background color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.certification h3 {
+    font-size: 1.1em; /* Title size */
+    color: #E45C45; /* Title color in blue */
+}
+
+.certification p {
+    font-size: 0.9em; /* Description size */
+    color: #333; /* Text color */
+}
+
+/* Footer */
+footer {
+    background-color: #69C3BA; /* Footer background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    background-color: #fff;
+    color: #71A3B6; /* Social icons in blue */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: black; /* Black on hover */
+    color: #fff;
+}
+
+/* Responsive Design for Projects and Certifications */
+@media (max-width: 768px) {
+    .project, .certification {
+        flex: 0 0 45%; /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .project, .certification {
+        flex: 0 0 100%; /* One item per row on mobile */
+    }
+}
