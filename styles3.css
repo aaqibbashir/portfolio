@@ -3,9 +3,14 @@ body {
     font-family: 'Andale Mono', monospace; /* Updated font to Andale Mono */
     margin: 0;
     padding: 0;
-    background-color: #F9F7F2; /* Light background */
+    /*background-color: #F9F7F2; /* Light background */
     color: #333;
     line-height: 1.6;
+	background: linear-gradient(
+            rgba(105, 195, 186, 0.7), /* Gradient color with transparency */
+            rgba(113, 163, 182, 0.7)
+        ), 
+        url(imgs/background.jpg) center/cover no-repeat; /* Background image */
 }
 
 /* Section Separator (Thicker Line between sections) */
@@ -29,7 +34,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    border-bottom: 2px solid #E45C45; /* Gradient complement color */
+    border-bottom: 2px solid #FCCD2A; /* Gradient complement color */
     z-index: 1000;
 }
 
@@ -109,10 +114,16 @@ header nav ul li a:active:after {
 
 /* Hero Section */
 #hero {
-    background: #E5E4E2; /* Lighter gradient background */
-    color: #333; /* Darker text */
+	background: linear-gradient(
+            rgba(105, 195, 186, 0.7), /* Gradient color with transparency */
+            rgba(113, 163, 182, 0.7)
+        ), 
+        url(imgs/background.jpg) center/cover no-repeat; /* Background image */
+   /* background: #E5E4E2; /* Lighter gradient background */
+    color: #fff; /* Darker text */
     padding: 150px 0; /* Increased height */
     text-align: center;
+	font-size:18px;
     position: relative;
 }
 
@@ -126,15 +137,15 @@ header nav ul li a:active:after {
 }
 
 .hero-text h2 {
-	color:#E45C45;
+	color:#FCCD2A;
     margin-bottom: 50px; /* Spacing between the title and buttons */
     margin-top: -30px; /* Moved title a bit higher */
 }
 
 /* Button styles for Hero section */
 #hero .btn {
-    background-color: #69C3BA; /* Teal button color */
-    color: #fff; /* Text color */
+    background-color: #FCCD2A; /* Teal button color */
+    color: #000; /* Text color */
     padding: 5px 25px; /* Button padding */
     border-radius: 20px; /* Rounded button corners */
     text-decoration: none; /* Remove underline */
@@ -149,12 +160,17 @@ header nav ul li a:active:after {
     color: #fff; /* White text on hover */
     transform: scale(1.05); /* Slightly enlarge button on hover */
 }
+/* About Section*/
+#about{
+	color:#fff;
+}
+
 
 /* Section Titles */
 section h2 {
     font-size: 2.5em;
     margin-bottom: 50px; /* Increased space after section titles */
-    color: #E45C45; /* Section titles in teal */
+    color: #FCCD2A; /* Section titles in teal */
     padding-left: 20px; /* Added left padding for titles */
 }
 
@@ -368,9 +384,16 @@ section h2 {
     color: #333; /* Text color */
 }
 
+/* Education Section*/
+
+#education{
+	color:#fff;
+}
+
+
 /* Footer */
 footer {
-    background-color: #69C3BA; /* Footer background */
+    background: linear-gradient(135deg, #69C3BA, #71A3B6); /* Footer background */
     color: #fff;
     text-align: center;
     padding: 10px 0;
