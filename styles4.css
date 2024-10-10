@@ -7,7 +7,7 @@ body {
     color: #333;
     line-height: 1.6;
 	background: 
-        url(imgs/IMG_7743.jpeg.jpg) center/cover no-repeat; /* Background image */
+        url(imgs/IMG_7743.jpeg) center/cover no-repeat; /* Background image */
 }
 
 /* Section Separator (Thicker Line between sections) */
