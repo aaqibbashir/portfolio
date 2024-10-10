@@ -7,7 +7,7 @@ body {
     color: #333;
     line-height: 1.6;
 	background: 
-        url(imgs/background.jpg) center/cover no-repeat; /* Background image */
+        url(imgs/IMG_7743.jpeg.jpg) center/cover no-repeat; /* Background image */
 }
 
 /* Section Separator (Thicker Line between sections) */
@@ -112,10 +112,10 @@ header nav ul li a:active:after {
 /* Hero Section */
 #hero {
 	background: linear-gradient(
-            rgba(172, 216, 230, 0.5),
-            rgba(2, 51, 115, 0.5)
+            rgba(172, 216, 230, 0.8),
+            rgba(2, 51, 115, 0.8)
         ),
-        url(imgs/background.jpg) center/cover no-repeat; /* Background image */
+        url(imgs/IMG_7744.jpeg) center/cover no-repeat; /* Background image */
    /* background: #E5E4E2; /* Lighter gradient background */
     color: #fff; /* Darker text */
     padding: 150px 0; /* Increased height */
